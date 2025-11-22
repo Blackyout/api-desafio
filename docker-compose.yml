@@ -20,7 +20,7 @@ services:
   # Servicio de API Django
   backend:
     build:
-      context: ./  # Busca el Dockerfile dentro de la carpeta 'backend'
+      context: ./backend  # Busca el Dockerfile dentro de la carpeta 'backend'
       dockerfile: Dockerfile
     restart: always
     command: sh -c "python manage.py migrate && python manage.py collectstatic --no-input && gunicorn core.wsgi:application --bind 0.0.0.0:8000"
