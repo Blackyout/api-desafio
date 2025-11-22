@@ -1,0 +1,11 @@
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "core.settings.dev"
+python_files = ["tests.py", "test_*.py", "*_tests.py"]
+
+[tool.ruff]
+line-length = 100
+exclude = ["migrations"]
+
+[tool.black]
+line-length = 100
+exclude = "/migrations/"
